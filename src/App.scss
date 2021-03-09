@@ -1,0 +1,37 @@
+@import 'modal.scss';
+
+body {
+  color: white;
+  background-color: #39003d;
+  text-align: center;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  border-radius: 100%;
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  border: 2px solid green;
+  text-align: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+

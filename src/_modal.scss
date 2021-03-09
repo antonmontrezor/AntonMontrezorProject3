@@ -1,0 +1,46 @@
+.hidden {
+  display: none;
+}
+
+.modal {
+    width: 70%;
+    height: 600px;
+    position: absolute;
+    color: black;
+    top: 10%;
+    left: 15%;
+    background-color: rgb(224, 161, 224);
+}
+
+.closeModal {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 40px;
+    height: 10px;
+    background-color: black;
+    border: none;
+    transform: rotate(45deg);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.closeModal::before {
+    content: ' ';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 40px;
+    height: 10px;
+    background-color: black;
+    transform: rotate(90deg);
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.closeModal:hover,
+.closeModal:focus,
+.closeModal:hover::before,
+.closeModal:focus::before {
+    background-color: rgb(179, 37, 124);
+}
