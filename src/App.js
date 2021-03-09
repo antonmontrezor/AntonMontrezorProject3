@@ -6,40 +6,17 @@ import Modal from './Modal.js';
 import './App.scss';
 
 function App() {
-    const [leagueId, setLeagueId] = useState();
-    const leaguesIds = [2002, 2021, 2019, 2014, 2015];
-    const [footballData, setFootballData] = useState([]);
+
+    const leaguesIds = {
+      bundesliga: 2002,
+      premierLeague: 2021,
+      serieA: 2019,
+      laLiga: 2014,
+      league1: 2015
+    }
+
     const [leagueData, setLeagueData] = useState([]);
     const [modal, setModal] = useState(false);
-
-
-    useEffect(() => {
-      // const token = '09722ed4b29e4ecca137025eb07bbb46';
-
-      axios({
-        method: 'GET',
-        url: 'http://proxy.hackeryou.com',
-        dataResponse: 'JSON',
-        paramsSerializer: function (params) {
-          return Qs.stringify(params)
-        },
-        params: {
-          reqUrl: `https://api.football-data.org/v2/competitions/`,
-          params: {
-            standingType: 'TOTAL',
-            plan: 'TIER_ONE'
-          },
-          proxyHeaders: {
-            'X-Auth-Token': '09722ed4b29e4ecca137025eb07bbb46'
-          },
-          xmlToJSON: false
-        }
-      })
-      .then(response => {
-        response = response.data.competitions;
-        setFootballData(response)
-      })
-    }, [])
 
     const handleClick = uniqueId => {
 
@@ -63,14 +40,11 @@ function App() {
         }
       })
       .then(response => {
-        console.log(response)
         response = response.data.standings[0].table;
         setLeagueData(response)
       })
 
       setModal(!modal)
-
-      setLeagueId(uniqueId); 
     }
 
   return (
