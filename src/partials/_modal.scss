@@ -10,10 +10,11 @@
     width: 80%;
     padding-bottom: 40px;
     
-    color: black;
-    background-color: rgb(224, 161, 224);
+    color: #000000;
+    background-color: #e0a1e0;
 
     h2 {
+        font-size: calc(2.5rem + 1vw);
         margin: 20px 0;
     }
 
@@ -22,6 +23,13 @@
         margin: 0 auto;
         padding: 0;
         text-align: left;
+        border-collapse: collapse;
+
+        td {
+            border: 2px solid #39003d;
+            vertical-align: middle;
+            text-align: center;
+        }
 
         img {
             width: 30px;
@@ -38,14 +46,14 @@
     height: 10px;
 
     border-radius: 10px;
-    background-color: black;
+    background-color: #000000;
 
     transition: all 0.2s;
 }
 
 .closeModal {
-    top: 5%;
-    right: 5%;
+    top: 30px;
+    right: 20px;
 
     border: none;
 
@@ -54,7 +62,7 @@
 
 .closeModal::before {
     content: ' ';
-    top: 0px;
+    top: 0;
     left: 0;
 
     transform: rotate(90deg);
@@ -64,5 +72,5 @@
 .closeModal:focus,
 .closeModal:hover::before,
 .closeModal:focus::before {
-    background-color: rgb(179, 37, 124);
+    background-color: #b3257c;
 }

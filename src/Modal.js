@@ -11,9 +11,9 @@ const Modal = ({ leagueData, modal, setModal }) => {
                         <table className='league'>
                             <thead>
                                 <tr>
+                                    <th></th>
+                                    <th></th>
                                     <th>Club</th>
-                                    <th></th>
-                                    <th></th>
                                     <th>Pts</th>
                                     <th>Last 5</th>
                                 </tr>
