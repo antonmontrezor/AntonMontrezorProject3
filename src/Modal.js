@@ -1,10 +1,9 @@
-const Modal = ({leagueData, modal, setModal}) => {
-    console.log(leagueData)
+const Modal = ({ leagueData, modal, setModal }) => {
     return (
-        <section className={`modal ${modal ? null : "hidden"}`}>
+        <section className={`modal ${modal ? null : 'hidden'}`}>
             <h2>Standings:</h2>
-            <button className="closeModal" onClick={() => setModal(!modal)}></button>
-            <table className="league">
+            <button className='closeModal' onClick={() => setModal(!modal)}></button>
+            <table className='league'>
                 <thead>
                     <tr>
                         <th>Club</th>
@@ -16,7 +15,8 @@ const Modal = ({leagueData, modal, setModal}) => {
                 </thead>
                 <tbody>
                     {
-                        leagueData.map(club => {
+                        leagueData.length !== 0 
+                        ? leagueData.map((club) => {
                             return (
                                 <tr key={club.position}>
                                     <td className='position'>{club.position}</td>
@@ -25,13 +25,14 @@ const Modal = ({leagueData, modal, setModal}) => {
                                     <td className='points'>{club.points}</td>
                                     <td className='currentForm'>{club.form}</td>
                                 </tr>
-                            )
+                            );
                         })
+                        : <h2>Unfortunately, data cannot be loaded at this point. Please, try again later.</h2>
                     }
                 </tbody>
             </table>
         </section>
-    )
-}
+    );
+};
 
 export default Modal;
