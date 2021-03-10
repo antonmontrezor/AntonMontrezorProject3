@@ -1,20 +1,12 @@
 import axios from 'axios';
 import Qs from 'qs';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import Main from './Main.js';
 import Modal from './Modal.js';
 import './App.scss';
 
 function App() {
-
-    const leaguesIds = {
-      bundesliga: 2002,
-      premierLeague: 2021,
-      serieA: 2019,
-      laLiga: 2014,
-      league1: 2015
-    }
-
+  
     const [leagueData, setLeagueData] = useState([]);
     const [modal, setModal] = useState(false);
 
@@ -50,7 +42,7 @@ function App() {
   return (
     <>
       <h1>Football Statistics App</h1>
-      <Main leaguesIds={leaguesIds} handleClick={handleClick}/>
+      <Main  handleClick={handleClick}/>
       <Modal modal={modal} setModal={setModal} leagueData={leagueData}/>
    </>
   );
