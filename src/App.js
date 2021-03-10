@@ -33,11 +33,10 @@ function App() {
 		.then(response => {
 			response = response.data.standings[0].table;
 			setLeagueData(response);
+            setModal(!modal);
         })
 		.catch(errors => alert('Unfortunately, data cannot be loaded at the moment! Please, try to disable your ad blocker and refresh the page!')
 		);
-
-        setModal(!modal);
     };
 
     return (
