@@ -1,6 +1,6 @@
-const leaguesData = [
+const footballLeagues = [
     {
-        leagueName: 'bundesliga',
+        leagueName: 'Bundesliga',
         id: 2002,
         logo: {
             url: 'https://drive.google.com/thumbnail?id=1gR3mz9-SD0AlGz7HatzghF1-YefVO4OY',
@@ -8,7 +8,7 @@ const leaguesData = [
         }
     },
     {
-        leagueName: 'premierLeague',
+        leagueName: 'English Premier League',
         id: 2021,
         logo: {
             url: 'https://drive.google.com/thumbnail?id=1kb_w01cP2cazFgYFA9HTy-LC5VKg-axS',
@@ -16,7 +16,7 @@ const leaguesData = [
         }
     },
     {
-        leagueName: 'serieA',
+        leagueName: 'Serie A',
         id: 2019,
         logo: {
             url: 'https://drive.google.com/thumbnail?id=12Mt8BpZ5XsNpVEn01jXvpg7gv1qCELQi',
@@ -24,7 +24,7 @@ const leaguesData = [
         }
     },
     {
-        leagueName: 'laLiga',
+        leagueName: 'La Liga',
         id: 2014,
         logo: {
             url: 'https://drive.google.com/thumbnail?id=1pzx2EYfPNuNd9Bep9AzrU4nt-UT-emBe',
@@ -32,7 +32,7 @@ const leaguesData = [
         }
     },
     {
-        leagueName: 'league1',
+        leagueName: 'League 1',
         id: 2015,
         logo: {
             url: 'https://drive.google.com/thumbnail?id=1fQBCPrtKGZCDZuv_DVytoKVfmk4EqdUl',
@@ -42,4 +42,4 @@ const leaguesData = [
 ]
 
 
-export default leaguesData;
+export default footballLeagues;

@@ -1,50 +1,60 @@
+import './App.scss';
 import axios from 'axios';
 import Qs from 'qs';
 import {useState} from 'react';
-import Main from './Main.js';
+import LeaguesSection from './LeaguesSection.js';
 import Modal from './Modal.js';
-import './App.scss';
+import footballLeagues from './footballLeagues';
 
 function App() {
-  
-    const [leagueData, setLeagueData] = useState([]);
-    const [modal, setModal] = useState(false);
 
-    const handleClick = uniqueId => {
+  const [leagueData, setLeagueData] = useState([]);
+  const [modal, setModal] = useState(false);
 
-      axios({
-        method: 'GET',
-        url: 'http://proxy.hackeryou.com',
-        dataResponse: 'JSON',
-        paramsSerializer: function (params) {
-          return Qs.stringify(params)
-        },
+  const handleClick = uniqueId => {
+
+    axios({
+      method: 'GET',
+      url: 'http://proxy.hackeryou.com',
+      dataResponse: 'JSON',
+      paramsSerializer: function (params) {
+        return Qs.stringify(params)
+      },
+      params: {
+        reqUrl: `https://api.football-data.org/v2/competitions/${uniqueId}/standings`,
         params: {
-          reqUrl: `https://api.football-data.org/v2/competitions/${uniqueId}/standings`,
-          params: {
-            standingType: 'TOTAL',
-            plan: 'TIER_ONE'
-          },
-          proxyHeaders: {
-            'X-Auth-Token': '09722ed4b29e4ecca137025eb07bbb46'
-          },
-          xmlToJSON: false
-        }
-      })
-      .then(response => {
-        response = response.data.standings[0].table;
-        setLeagueData(response)
-      })
+          standingType: 'TOTAL',
+          plan: 'TIER_ONE'
+        },
+        proxyHeaders: {
+          'X-Auth-Token': '09722ed4b29e4ecca137025eb07bbb46'
+        },
+        xmlToJSON: false
+      }
+    })
+    .then(response => {
+      response = response.data.standings[0].table;
+      setLeagueData(response)
+    })
 
-      setModal(!modal)
+    setModal(!modal)
     }
 
   return (
     <>
-      <h1>Football Statistics App</h1>
-      <Main  handleClick={handleClick}/>
-      <Modal modal={modal} setModal={setModal} leagueData={leagueData}/>
-   </>
+      <header>
+        <h1>Football | Soccer Statistics App</h1>
+      </header>
+      <main>
+        <div className="wrapper">
+          <LeaguesSection footballLeagues={footballLeagues} handleClick={handleClick}/>
+        </div>
+        <Modal modal={modal} setModal={setModal} leagueData={leagueData}/>
+      </main>
+      <footer>
+        <p>Created at <a href="https://junocollege.com/">Juno College</a> by Anton</p>
+      </footer>
+    </>
   );
 }
 

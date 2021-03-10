@@ -1,12 +1,10 @@
-import leaguesData from './leaguesData';
-
-const Main = ({handleClick}) => {
-    console.log(leaguesData)
+const Main = ({footballLeagues, handleClick}) => {
     return (
-        <div className="container">
+        <section>
+            <h2>Top 5 European Football Leagues</h2>
             <ul>
                 {
-                    leaguesData.map(league => {
+                    footballLeagues.map(league => {
                         return (
                             <li key={league.id}>
                                 <a href="#" onClick={() => handleClick(league.id)}>
@@ -17,7 +15,8 @@ const Main = ({handleClick}) => {
                     })
                 }
             </ul>
-        </div>
+            <p>Click on league`s image to see teams` standings for the current season!</p>
+        </section>
     )
 }
 
