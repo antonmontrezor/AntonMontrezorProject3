@@ -1,6 +1,6 @@
 const Main = ({footballLeagues, handleClick}) => {
     return (
-        <section>
+        <section className='leagues'>
             <h2>Top 5 European Football Leagues</h2>
             <ul>
                 {
@@ -15,7 +15,7 @@ const Main = ({footballLeagues, handleClick}) => {
                     })
                 }
             </ul>
-            <p>Click on league`s image to see teams` standings for the current season!</p>
+            <p>Click on league's image to see teams' standings for the current season!</p>
         </section>
     )
 }
