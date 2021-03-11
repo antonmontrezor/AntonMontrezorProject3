@@ -1,3 +1,4 @@
+// media query for large screen sizes
 @media (min-width: 1500px) {
     body {
         font-size: 2rem;
@@ -21,6 +22,7 @@
 
 }
 
+// media queries for screen sizes below 1350px
 @media (max-width: 1350px) {
     .wrapper {
         width: 60%;

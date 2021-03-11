@@ -1,5 +1,7 @@
 import footballLeagues from './footballLeagues';
 
+// displaying leagues section and attaching an event listener to each anchor tag
+// when user clicks on an anchor tag, handleClick function will be called and a unique league id will be passed to it as an argument 
 const Main = ({ handleClick }) => {
     return (
         <section className="leagues">

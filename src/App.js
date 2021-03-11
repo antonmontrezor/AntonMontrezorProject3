@@ -6,9 +6,13 @@ import LeaguesSection from './LeaguesSection.js';
 import Modal from './Modal.js';
 
 function App() {
+
+    //initializing leagueData state to hold API data when it is retrieved 
     const [leagueData, setLeagueData] = useState([]);
+    //initializing modal state for showing/hiding a modal window
     const [modal, setModal] = useState(false);
 
+    //handleClick function will make an API call based on passed uniqueId
     const handleClick = uniqueId => {
         axios({
             method: 'GET',
@@ -31,7 +35,9 @@ function App() {
         })
 		.then(response => {
 			response = response.data.standings[0].table;
+            //updating leagueData with retrieved API data so it can be passed to Modal component
 			setLeagueData(response);
+            //updating modal state so a modal window can be shown 
             setModal(!modal);
         })
 		.catch(errors => alert('Unfortunately, data cannot be loaded at the moment! Please, try to disable your ad blocker and refresh the page!')
@@ -45,8 +51,10 @@ function App() {
             </header>
             <main>
                 <div className='wrapper'>
+                    {/* passing handleClick so it can be called within LeaguesSection component */}
                     <LeaguesSection handleClick={handleClick}/>
                 </div>
+                {/* passing modal and its updater function to Modal component so they can be used to show/hide a modal window -- also passing leagueData so it can be displayed on the page */}
                 <Modal modal={modal} setModal={setModal} leagueData={leagueData}/>
             </main>
             <footer>

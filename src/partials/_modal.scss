@@ -22,12 +22,18 @@
         width: 80%;
         margin: 0 auto;
         padding: 0;
-        text-align: left;
+
         border-collapse: collapse;
+        text-align: left;
 
         td {
             border: 2px solid #39003d;
             vertical-align: middle;
+        }
+
+        td,
+        .points,
+        .lastFive {
             text-align: center;
         }
 
