@@ -58,7 +58,7 @@ function App() {
                 <Modal modal={modal} setModal={setModal} leagueData={leagueData}/>
             </main>
             <footer>
-                <p>Created at <a href='https://junocollege.com/'>Juno College</a> by Anton</p>
+                <p>Created at <a href='https://junocollege.com/'>Juno College</a> by Anton Montrezor</p>
             </footer>
         </>
     );

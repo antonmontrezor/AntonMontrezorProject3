@@ -26,7 +26,7 @@ const Modal = ({ leagueData, modal, setModal }) => {
                                         return (
                                             <tr key={club.position}>
                                                 <td>{club.position}</td>
-                                                <td>
+                                                <td className="teamLogo">
                                                     <img src={club.team.crestUrl} alt='A team`s logo' />
                                                 </td>
                                                 <td>{club.team.name}</td>

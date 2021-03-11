@@ -38,7 +38,7 @@
         width: 75%;
     }
 
-    ul li a {
+    ul li button {
         width: calc(65px + 10vw);
         height: calc(65px + 10vw);
     }
@@ -66,7 +66,7 @@
 }
 
 @media (max-width: 305px) {
-    ul li a {
+    ul li button {
         width: calc(55px + 10vw);
         height: calc(55px + 10vw);
     }

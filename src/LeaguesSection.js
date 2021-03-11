@@ -1,7 +1,7 @@
 import footballLeagues from './footballLeagues';
 
-// displaying leagues section and attaching an event listener to each anchor tag
-// when user clicks on an anchor tag, handleClick function will be called and a unique league id will be passed to it as an argument 
+// displaying leagues section and attaching an event listener to each button
+// when user clicks on a button, handleClick function will be called and a unique league id will be passed to it as an argument 
 const Main = ({ handleClick }) => {
     return (
         <section className="leagues">
@@ -11,9 +11,9 @@ const Main = ({ handleClick }) => {
                     footballLeagues.map((league) => {
                         return (
                             <li key={league.id}>
-                                <a href='#' onClick={() => handleClick(league.id)}>
+                                <button onClick={() => handleClick(league.id)}>
                                     <img src={league.logo.url} alt={league.logo.altText} />
-                                </a>
+                                </button>
                             </li>
                         );
                     })
