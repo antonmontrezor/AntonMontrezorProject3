@@ -39,8 +39,8 @@
     }
 
     ul li button {
-        width: calc(65px + 10vw);
-        height: calc(65px + 10vw);
+        width: calc(120px + 4vw);
+        height: calc(120px + 4vw);
     }
 }
 
@@ -65,9 +65,13 @@
     }
 }
 
-@media (max-width: 305px) {
-    ul li button {
-        width: calc(55px + 10vw);
-        height: calc(55px + 10vw);
+@media (max-width: 400px) {
+    ul li {
+        margin: 20px 10px;
+
+        button {
+            width: calc(110px + 4vw);
+            height: calc(110px + 4vw);
+        }
     }
 }
