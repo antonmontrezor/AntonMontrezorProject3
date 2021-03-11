@@ -16,7 +16,7 @@ function App() {
     const handleClick = uniqueId => {
         axios({
             method: 'GET',
-            url: 'http://proxy.hackeryou.com',
+            url: 'https://proxy.hackeryou.com',
             dataResponse: 'JSON',
             paramsSerializer: function (params) {
                 return Qs.stringify(params);
