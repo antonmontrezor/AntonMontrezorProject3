@@ -1,4 +1,6 @@
-const Main = ({ footballLeagues, handleClick }) => {
+import footballLeagues from './footballLeagues';
+
+const Main = ({ handleClick }) => {
     return (
         <section className="leagues">
             <h2>Top 5 European Football Leagues</h2>

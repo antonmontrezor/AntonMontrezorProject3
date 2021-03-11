@@ -2,7 +2,6 @@ import './App.scss';
 import axios from 'axios';
 import Qs from 'qs';
 import { useState } from 'react';
-import footballLeagues from './footballLeagues';
 import LeaguesSection from './LeaguesSection.js';
 import Modal from './Modal.js';
 
@@ -46,7 +45,7 @@ function App() {
             </header>
             <main>
                 <div className='wrapper'>
-                    <LeaguesSection footballLeagues={footballLeagues} handleClick={handleClick}/>
+                    <LeaguesSection handleClick={handleClick}/>
                 </div>
                 <Modal modal={modal} setModal={setModal} leagueData={leagueData}/>
             </main>

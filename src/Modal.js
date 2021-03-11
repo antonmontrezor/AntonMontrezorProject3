@@ -1,5 +1,4 @@
 const Modal = ({ leagueData, modal, setModal }) => {
-    console.log(leagueData)
 
     return (
         <section className={`modal ${modal ? null : 'hidden'}`}>
