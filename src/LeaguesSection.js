@@ -1,14 +1,14 @@
-import footballLeagues from './footballLeagues';
+import soccerLeagues from './soccerLeagues';
 
 // displaying leagues section and attaching an event listener to each button
 // when user clicks on a button, handleClick function will be called and a unique league id will be passed to it as an argument 
 const Main = ({ handleClick }) => {
     return (
         <section className="leagues">
-            <h2>Top 5 European Football Leagues</h2>
+            <h2>Top 5 European Soccer Leagues</h2>
             <ul>
                 {
-                    footballLeagues.map((league) => {
+                    soccerLeagues.map((league) => {
                         return (
                             <li key={league.id}>
                                 <button onClick={() => handleClick(league.id)}>

@@ -1,4 +1,4 @@
-const footballLeagues = [
+const soccerLeagues = [
     {
         leagueName: 'Bundesliga',
         id: 2002,
@@ -41,4 +41,4 @@ const footballLeagues = [
     },
 ];
 
-export default footballLeagues;
+export default soccerLeagues;

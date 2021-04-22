@@ -47,7 +47,7 @@ function App() {
     return (
         <>
             <header>
-                <h1>Football | Soccer Statistics App</h1>
+                <h1>Soccer Statistics App</h1>
             </header>
             <main>
                 <div className='wrapper'>
