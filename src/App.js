@@ -2,8 +2,8 @@ import './App.scss';
 import axios from 'axios';
 import Qs from 'qs';
 import { useState } from 'react';
-import LeaguesSection from './LeaguesSection.js';
-import Modal from './Modal.js';
+import LeaguesSection from './LeaguesSection';
+import Modal from './Modal';
 
 function App() {
 
